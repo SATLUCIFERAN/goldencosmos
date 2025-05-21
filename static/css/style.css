@@ -1,0 +1,417 @@
+body {
+    font-family: 'Helvetica Neue', sans-serif;
+    background-color: #fff;
+    color: #333;
+  }
+  
+
+  .carousel-inner {
+    max-height: 90vh;
+  }
+  
+
+  /* ########################### */
+
+  .carousel-item img {
+    max-height: 90vh;
+    object-fit: cover;
+    width: 100%;
+  }
+
+
+body {
+  background: linear-gradient(to right, #f2f4b0, #ea8867);
+  color: #fff;
+}
+
+header {
+  background-color: #000000; /* absolute black */
+  box-shadow: 0 0 40px rgba(0, 0, 0, 1); /* stronger shadow for depth */
+  border-bottom: 1px solid rgb(11, 11, 11); /* optional soft line to define edge */
+}
+
+
+
+/* ############################# */
+
+.carousel-item img {
+  box-shadow: 0 0 20px rgba(255, 215, 0, 0.5);
+  border-radius: 12px;
+}
+
+
+/* ############# logo-overlay ############# */
+
+.logo-overlay {
+  position: absolute;
+  top: 0%;
+  left: 0%;
+  transform: translate(-50%, -50%);
+  z-index: 10;
+  width: 140px;
+  height: 140px;
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 50%;
+  box-shadow: 0 0 15px rgba(255, 215, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+}
+
+.logo-overlay img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 50%;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  background-color: rgba(0, 0, 0, 0.5);  /* or gold, etc. */
+  border-radius: 50%;
+  padding: 10px;
+}
+
+
+#wineCarousel {
+  overflow: visible;
+}
+
+
+.golden-glow {
+  font-weight: 800;
+  font-size: 3.0rem;
+  background: linear-gradient(90deg, #f5d100, #ff9900, #fff8dc);
+  background-size: 300% 300%;
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  -webkit-text-fill-color: transparent;
+  animation: shimmer 4s ease-in-out infinite;
+  text-shadow: 1px 1px 4px rgba(255, 223, 0, 0.3), 0 0 15px rgba(255, 153, 0, 0.5);
+}
+
+
+.wine-moments {
+  background: linear-gradient(to bottom, #fffaf0, #fff);
+}
+
+.golden-caption {
+  font-family: 'Georgia', serif;
+  font-size: 1.8rem;
+  color: #b8860b;
+  text-shadow: 0 0 5px rgba(255, 215, 0, 0.4);
+}
+
+.wine-moments p.lead {
+  color: #333;
+}
+
+
+.card-img-top {
+  height: 250px; /* or any fixed height */
+  object-fit: cover;
+  object-position: center;
+}
+
+/* ########## ทำ responsive หน้า product ######### */
+/* 🔸 Section Layout */
+
+.product-section {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100%;
+  min-height: 650px;
+  display: flex;
+  align-items: center;
+  padding: 5rem 1rem;
+}
+
+.product-box {
+  background-color: rgba(255, 255, 255, 0.85);
+  padding: 2rem;
+  border-radius: 1rem;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.15);
+  margin-top: 2rem;
+}
+
+/* 🔸 Background Images */
+.pineapple-bg {
+  background-image: url('/static/images/pineapplebb.png');
+}
+
+.mango-bg {
+  background-image: url('/static/images/mangobb.png');
+}
+
+.banana-bg {
+  background-image: url('/static/images/bananabb.png');
+}
+
+/* 🔸 Responsive Fixes */
+@media (max-width: 768px) {
+  .product-section {
+    flex-direction: column;
+    justify-content: center;
+    min-height: auto;
+  }
+
+}
+
+.price-label {
+  position: absolute;
+  z-index: 10;
+  width: 150px; /* default size */
+  top: 0%;
+  right: 0%;
+}
+
+/* 📱 When screen width is 768px or less */
+@media (max-width: 768px) {
+  .price-label {
+    width: 90px;   /* smaller image */
+    top: 5%;
+    right: 2%;
+  }
+}
+
+/* 📱 Even smaller for phones */
+@media (max-width: 480px) {
+  .price-label {
+    width: 70px;
+  }
+}
+
+
+
+.wine-heading {
+  position: absolute;
+  top: 210px; /* was 155px */
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 30;
+  background-color: rgba(255, 196, 79, 0.7);
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  text-align: center;
+  font-size: 2rem;
+}
+
+@media (max-width: 768px) {
+  .wine-heading {
+    top: 80px; /* leave mobile as-is */
+    font-size: 1.25rem;
+    padding: 0.5rem 1rem;
+    width: 90%;
+  }
+}
+
+
+
+.brand-title {
+  font-size: 3.5rem; /* larger for impact */
+  font-weight: 900;
+  background: linear-gradient(90deg, #f5d100, #ff9900, #fff8dc);
+  background-size: 300% 300%;
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  -webkit-text-fill-color: transparent;
+  animation: shimmer 4s ease-in-out infinite;
+  text-shadow: 2px 2px 8px rgba(255, 215, 0, 0.6);
+}
+
+@keyframes shimmer {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.brand-subtitle {
+  font-size: 1.4rem;
+  font-style: italic;
+  color: rgba(255, 255, 255, 0.85);
+  text-shadow: 1px 1px 6px rgba(255, 255, 255, 0.3);
+}
+
+
+/* Section Background Responsiveness */
+/* === Responsive Background Section === */
+.product-section {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  padding: 4rem 1rem;
+}
+
+/* Backgrounds */
+.pineapple-bg {
+  background-image: url('/static/images/pineapplebb.png');
+}
+.mango-bg {
+  background-image: url('/static/images/mangobb.png');
+}
+.banana-bg {
+  background-image: url('/static/images/bananabb.png');
+}
+
+/* Text & Buttons */
+.product-title {
+  font-size: clamp(1.8rem, 3vw, 2.8rem); /* Responsive */
+  color: #f8f9fa;
+  margin-bottom: 1rem;
+}
+
+.see-more-link {
+  font-size: clamp(1.1rem, 2vw, 1.6rem); /* Responsive */
+  font-weight: bold;
+  color: #1189eb;
+  text-decoration: none;
+}
+
+/* Optional spacing helper for central alignment */
+.text-box-wrapper {
+  padding-top: 25vh;
+  padding-bottom: 20vh;
+}
+
+/* Responsive Layout Fix */
+@media (max-width: 768px) {
+  .product-section {
+    flex-direction: column;
+    justify-content: center;
+    min-height: auto;
+    padding: 3rem 1rem;
+  }
+
+  .text-box-wrapper {
+    padding-top: 120px;
+    padding-bottom: 120px;
+  }
+}
+
+
+/* ✅ Make product title and see-more fully responsive and readable */
+@media (max-width: 768px) {
+  .product-section .row {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end; /* ✅ ชิดขวาสำหรับข้อความ */
+  }
+
+  .product-section .row > div {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: flex-end;
+    padding: 2rem 1rem 3rem;
+  }
+
+  .product-title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #f8f9fa;
+    margin-bottom: 0.25rem;
+    text-align: right;
+    background: none;
+  }
+
+  .see-more-link {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #1189eb;
+    text-decoration: none;
+    text-align: right;
+    background: none;
+    padding: 0;
+    margin: 0;
+  }
+}
+
+
+@media (max-width: 768px) {
+  /* Section Mango: กลับด้าน align เป็นฝั่งซ้าย */
+  .mango-bg .row {
+    align-items: flex-start !important;
+  }
+
+  .mango-bg .row > div {
+    align-items: flex-start !important;
+    text-align: left !important;
+  }
+
+  .mango-bg .product-title,
+  .mango-bg .see-more-link {
+    text-align: left !important;
+  }
+}
+
+
+
+@media (max-width: 768px) {
+  .product-section .row > div {
+    flex-direction: column !important;
+  }
+
+  .product-title {
+    order: 1;
+    margin-bottom: 0.5rem;
+  }
+
+  .see-more-link {
+    order: 2;
+  }
+}
+
+.wine-heading {
+  top: 210px;
+  z-index: 30;
+  background-color: rgba(255, 196, 79, 0.7);
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  text-align: center;
+  font-size: 2rem;
+  min-width: max-content;
+}
+
+/* ✅ Desktop only: ขยับข้อความภายในให้เอนขวาเล็กน้อย */
+@media (min-width: 768px) {
+  .wine-heading {
+    text-align: left;
+    padding-left: 3rem;
+  }
+}
+
+
+
+/* ####### สำหรับหน้า about */
+.font-about {
+  font-family: 'Prompt', sans-serif;
+  font-size: 1rem;
+  line-height: 1.7;
+}
+
+.font-about h1,
+.font-about h2,
+.font-about .golden-caption,
+.font-about h5 {
+  font-family: 'Mitr', sans-serif;
+  font-weight: 500;
+  color: #b8860b;
+}
+
+.font-about p.lead {
+  font-size: 1.1rem;
+  font-weight: 300;
+  color: #444;
+}

@@ -1,0 +1,44 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+
+<style>
+  .contact-page .container,
+  .contact-page .container * {
+    color: black !important;
+  }
+</style>
+
+<div class="contact-page">
+  <div class="container mt-5">
+    <h1>ติดต่อเรา | Contact Us</h1>
+
+    <p>เรายินดีตอบทุกคำถาม ไม่ว่าจะเป็นการสั่งซื้อ ตัวแทนจำหน่าย หรือแค่แวะมาทักทาย 😊<br>
+    📬 ส่งข้อความถึงเราได้ที่แบบฟอร์มด้านล่าง หรือผ่านช่องทางที่คุณสะดวก</p>
+
+    <div class="contact-info">
+      <ul>
+        <li>📞 โทรศัพท์: 095-949-5007</li>
+        <li>📧 อีเมล: phanwiti@hotmail.com</li>
+        <li>📍 ที่อยู่: 100/31 ต.พานทอง อ.พานทอง จ.ชลบุรี 20160</li>
+        <li>💬 LINE : <a href="https://lin.ee/c1pz2dP" target="_blank">เพิ่มเพื่อน คลิกเลย !</a></li>
+        <li>💬 LINE : หรือเลือกแสกน Qr Code</li>
+        <img src="https://qr-official.line.me/gs/M_246feang_BW.png?oat_content=qr" alt="LINE QR Code" style="width: 180px; margin-top: 10px;" />
+      </ul>
+    </div>
+
+    <br>
+    <p style="margin-left: 25px;">😊หรือติดต่อเราได้ที่<br></p>
+
+    <iframe
+      src="https://www.google.com/maps/embed?pb=..."
+      width="600" height="400"
+      style="border:0; margin-left: 25px;"  
+      allowfullscreen="" loading="lazy"
+      referrerpolicy="no-referrer-when-downgrade">
+    </iframe>
+  </div>
+</div>
+
+{% endblock %}

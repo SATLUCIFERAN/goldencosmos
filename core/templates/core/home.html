@@ -1,0 +1,148 @@
+{% extends 'base.html' %}
+{% load static %}
+
+
+{% block content %}
+
+ <!-- Product Section with Carousel -->
+    <section class="py-3">
+      <div class="container position">   
+        {% if request.path == '/' %}
+      <h2 class="wine-heading position-absolute start-50 translate-middle-x d-none d-md-block">
+        Our Wine Collection
+      </h2>
+        {% endif %}
+
+
+        
+        <div id="wineCarousel" class="carousel slide position-relative" data-bs-ride="carousel" data-bs-interval="3000">
+                                
+          <!-- 🔘 Carousel Dots -->
+          <div class="carousel-indicators">
+            <button type="button" data-bs-target="#wineCarousel" data-bs-slide-to="0" class="active" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#wineCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#wineCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            <button type="button" data-bs-target="#wineCarousel" data-bs-slide-to="3" aria-label="Slide 4"></button>
+          </div>
+          <div class="carousel-inner position-relative">            
+            
+            <!-- Carousel Items -->                     
+            
+            <div class="carousel-item active">
+                <img src="{% static 'images/multi1.png' %}" class="d-block w-100" alt="Golden Cosmos Pineapple Wine">
+                <div class="carousel-caption d-none d-md-block bg-dark bg-opacity-50 rounded p-3">
+                  <h5>Golden Cosmos Pineapple Wine</h5>
+                  <p>Elegant and rich flavor for special moments.</p>
+                </div>
+            </div>
+            <div class="carousel-item">
+              <img src="{% static 'images/banana.png' %}" class="d-block w-100"   alt="Golden Cosmos Banana Wine">
+              {% comment %} <div class="carousel-caption d-none d-md-block bg-dark bg-opacity-50 rounded p-3">
+                <h5>Golden Cosmos Banana Wine</h5>
+                <p>A unique taste inspired by golden bananas.</p>
+              </div> {% endcomment %}
+            </div>
+            <div class="carousel-item">
+              <img src="{% static 'images/mango.png' %}" class="d-block w-100"  alt="Golden Cosmos Mango Wine">
+              {% comment %} <div class="carousel-caption d-none d-md-block bg-dark bg-opacity-50 rounded p-3">
+                <h5>Golden Cosmos Pineapple Wine</h5>
+                <p>Elegant and rich flavor for special moments.</p>
+              </div> {% endcomment %}
+            </div>
+            <div class="carousel-item">
+                <img src="{% static 'images/pineapple.png' %}" class="d-block w-100"  alt="Golden Cosmos Pineapple Wine">
+                {% comment %} <div class="carousel-caption d-none d-md-block bg-dark bg-opacity-50 rounded p-3">
+                  <h5>Golden Cosmos Mango Wine</h5>
+                  <p>Elegant and rich flavor for special moments.</p>
+                </div> {% endcomment %}
+              </div>           
+             
+         
+             <button class="carousel-control-prev" type="button" data-bs-target="#wineCarousel" data-bs-slide="prev"
+            style="position: absolute; top: 50%; left: 0; transform: translateY(-50%); z-index: 5;">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#wineCarousel" data-bs-slide="next"
+              style="position: absolute; top: 50%; right: 0; transform: translateY(-50%); z-index: 5;">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+            </div> 
+            
+          <!-- 🔖 Overlay Label -->
+            <img src="{% static 'images/price.png' %}" 
+              alt="Special Price Label"
+              class="price-label" />
+
+
+                     
+          </div>          
+        
+
+          
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Brand Story / Quote -->
+    <section class="bg-light py-2 text-center">
+      <div class="container">
+        <blockquote class="blockquote">
+          <p class="mb-0 fst-italic">"ใจได้ปลดปล่อย พลังชีวิตได้เปล่งประกาย"<br>
+          <small class="text-muted">"Where your mind escapes, and your soul shines."</small></p>
+        </blockquote>
+      </div>
+    </section>
+
+    <!-- Wine Moments Section -->
+<section class="wine-moments py-5">
+  <div class="container">
+
+    <!-- Row 1: Image Left, Text Right -->
+    <div class="row align-items-center mb-5">
+      <div class="col-md-3">
+        <img src="{% static 'images/party1.png' %}" class="img-fluid rounded shadow" alt="Party with Golden Cosmos">
+      </div>
+      <div class="col-md-6  offset-md-1" >
+        <h3 class="golden-caption">"ยกแก้วฉลองให้ค่ำคืนแห่งมิตรภาพ 🍷"</h3>
+        <p class="lead">Golden Cosmos เติมเต็มช่วงเวลาดี ๆ ให้เปล่งประกาย</p>
+      </div>
+    </div>
+
+    <!-- Row 2: Text Left, Image Right -->
+    <div class="row align-items-center flex-md-row-reverse mb-5">
+      <div class="col-md-3">
+        <img src="{% static 'images/party2.png' %}" class="img-fluid rounded shadow" alt="Cozy Wine Night">
+      </div>
+      <div class="col-md-6">
+        <h3 class="golden-caption">"วินาทีแห่งความสุข ไม่ต้องมีคำบรรยาย🍃"</h3>
+        <p class="lead">แค่มี Golden Cosmos อยู่ใกล้ ก็พอแล้ว</p>
+      </div>
+    </div>
+
+    <!-- Row 3: Image Left, Text Right -->
+    <div class="row align-items-center mb-5">
+      <div class="col-md-3">
+        <img src="{% static 'images/party3.png' %}" class="img-fluid rounded shadow" alt="Golden Toasts">
+      </div>
+      <div class="col-md-6">
+        <h3 class="golden-caption">"สายลมเย็นจากทะเล...และรสไวน์หวานละมุน สร้างช่วงเวลาที่เราจะไม่มีวันลืม<img src="{% static 'images/moon.png' %}" alt="icon" style="width: 40px; height: 40px; vertical-align: middle; margin-left: 8px;">"         
+        <p class="lead">ไวน์ของเรา...เติมเต็มบทสนทนาที่ไม่มีคำพูดใดจะเพียงพอ</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+{% endblock %}
+
+
+
+
+
+   
+
+
+   

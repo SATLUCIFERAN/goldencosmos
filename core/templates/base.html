@@ -1,0 +1,130 @@
+{% load static %}
+
+<!DOCTYPE html>
+<style>
+.carousel-inner {
+      max-height: 80vh; /* or set to a fixed px value like 600px */
+    }
+  
+    .carousel-item img {
+      max-height: 80vh;  /* or same fixed px as above */
+      object-fit: cover;
+      width: 100%;
+    }
+
+<!-- ✅ Responsive Overlay Style -->
+  .price-label {
+  position: absolute;
+  z-index: 10;
+}
+
+@media (max-width: 768px) {
+  .price-label {
+    top: 5%;
+    right: 2%;
+    width: 100px;
+  }
+}
+
+@media (min-width: 769px) {
+  .price-label {
+    top: 0%;
+    right: 0%;
+    width: 150px;
+  }
+}
+</style>
+ 
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Golden Cosmos</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="{% static 'css/style.css' %}" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    {% block extra_head %}
+    <link href="https://fonts.googleapis.com/css2?family=Mitr:wght@300;400;500&family=Prompt:wght@300;400;600&display=swap" rel="stylesheet">
+    {% endblock %}
+
+    
+
+</head>
+
+<body class="{% block body_class %}{% endblock %}">  
+  
+ <!-- Banner + Navbar Together -->
+<header class="bg-dark text-white py-5">
+  <div class="container-fluid">
+    <!-- Flex Container -->
+    <div class="d-flex flex-wrap justify-content-between align-items-center px-3 px-md-5">
+
+      <!-- Logo -->
+      <div class="d-flex align-items-center gap-3">
+        <img src="{% static 'images/logo.png' %}" alt="Golden Cosmos Logo" style="width: 80px;">
+        <!-- Social Icons -->
+        <div class="d-flex gap-2">
+          <a href="#" class="text-white"><i class="fab fa-facebook-f fa-lg"></i></a>
+          <a href="https://instagram.com/yourpage" class="text-white"><i class="fab fa-instagram fa-lg"></i></a>
+        </div>
+      </div>
+
+      <!-- Center title -->
+      <!-- Center title (desktop) -->
+      <div class="text-center mx-auto d-none d-md-block">
+        <h1 class="brand-title mb-2">Golden Cosmos</h1>
+        <p class="brand-subtitle">Where your mind escapes, and your soul shines.</p>
+      </div>
+
+
+      <!-- Navbar -->
+      <nav class="navbar navbar-expand-md navbar-dark p-0">
+        <button class="navbar-toggler ms-auto" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+          <ul class="navbar-nav text-end">
+            <li class="nav-item"><a class="nav-link active" href="{% url 'home' %}">Home</a></li>
+            <li class="nav-item"><a class="nav-link" href="{% url 'about' %}">About</a></li>
+            <li class="nav-item"><a class="nav-link" href="{% url 'product' %}">Products</a></li>
+            <li class="nav-item"><a class="nav-link" href="{% url 'contact' %}">Contact</a></li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+
+    <!-- ✅ Mobile Only: Centered title -->
+    <!-- ✅ Mobile Only: Centered title -->
+    <div class="text-center d-md-none mt-2">
+      <h1 class="brand-title mb-2">Golden Cosmos</h1>
+      <p class="brand-subtitle small">Where your mind escapes, and your soul shines.</p>
+    </div>
+
+      {% if request.path == '/' %}
+      <h2 class="text-white fw-bold px-5 py-2 mt-3 rounded shadow d-md-none"
+          style="background-color: rgba(255, 196, 79, 0.7); font-size: 1.2rem;">
+        Our Wine Collection
+      </h2>
+      {% endif %}
+
+    </div>
+  </div>
+</header>
+
+
+<!-- ✅ MAIN CONTENT -->
+<main>
+{% block content %}{% endblock %}
+</main>
+
+ <!-- Footer -->
+    <footer class="bg-dark text-white py-4 text-center">
+      <div class="container">
+        <p>© 2025 Golden Cosmos. All rights reserved.</p>
+      </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
